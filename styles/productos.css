@@ -1,0 +1,181 @@
+html, body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header a{
+    text-decoration: none;
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: black;
+    font-weight: bold;
+}
+
+.Create_product{
+    width: 15%;
+    height: 30%;
+    position: absolute;
+    top: 39%;
+    left: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+}
+
+.Create_product p{
+    width: 60%;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.Create_product img{
+    width: 15%;
+}
+
+.Principal{
+    width: 90%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Categorias{
+    box-sizing: border-box;
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Categoria{
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.Categoria img{
+    width: 60%;
+}
+
+.hr1{
+    width: 90%;
+    height: 5px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 5px;
+}
+
+.Productos{
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    width: 23%;
+    height: 500px;
+    margin-bottom: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.Imagen{
+    height: 70%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.Imagen img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Contenido{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Contenido h2,p{
+    margin: 0;
+}
+
+.Contenido p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.cardButtons{
+    width: 90%;
+    height: 30%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contenido button{
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #cccccc;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liked img{
+    width: 32%;
+}
+
+
+body.darkmode{
+    background-color: black;
+    color: white;
+}

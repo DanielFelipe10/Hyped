@@ -1,0 +1,4 @@
+//Ver los productos con su categoria y nombre de categoria
+SELECT Products.nombre, Products.descripcion, categoria.nombre AS categoria, Products.precio
+FROM Products
+INNER JOIN categoria ON Products.categoria_id = categoria.id;

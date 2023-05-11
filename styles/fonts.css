@@ -1,0 +1,143 @@
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    width: 60%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+/*header a{
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: white;
+    font-weight: bold;
+}*/
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav form{
+    width: 30%;
+    height: 50px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav form input{
+    object-fit: cover;
+    width: 80%; 
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 5px; 
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+nav form img{
+    width: 8%;
+    cursor: pointer;
+}
+nav form input:active{
+    border: none;
+}
+nav form input:focus{
+    border: none;
+}
+
+.Presentacion{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgMain{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgMain img{
+    z-index: 2;
+}
+
+.ImgMain h1{
+    margin: 0;
+    position: absolute;
+    color: white;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 30rem;
+    z-index: 1;
+}
+
+.options{
+    width: 10%;
+    height: 30%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    list-style: none;
+}
+
+.options a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.9rem; 
+    font-family: 'Play', sans-serif;
+    font-weight: bold;
+}
+
+.options h1{
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: white;
+    font-weight: bold;
+}
+
+
+.font1{
+    font-family: 'Play', sans-serif;
+    font-size: 30px;
+}
+.font2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+.font3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+.font4{
+    font-family: 'Sedgwick Ave Display', sans-serif;
+    font-size: 30px;
+}
