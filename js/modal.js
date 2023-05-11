@@ -1,12 +1,23 @@
-const close = document.querySelector('.close-button');
-const modal = document.querySelector('.modal-container');
+class modal {
+    constructor(closeButtonSelector, modalContainerSelector) {
+      this.closeButton = document.querySelector(closeButtonSelector);
+      this.modalContainer = document.querySelector(modalContainerSelector);
+      this.openModal = this.openModal.bind(this);
+      this.closeModal = this.closeModal.bind(this);
+    }
+  
+    openModal() {
+      this.modalContainer.classList.add('show');
+    }
+  
+    closeModal() {
+      this.modalContainer.classList.remove('show');
+    }
+  
+    start() {
+      setTimeout(this.openModal, 3000);
+      this.closeButton.addEventListener('click', this.closeModal);
+    }
+  }
 
-function openModal() {
-    modal.classList.add('show');
-}
-
-setTimeout(openModal, 3000);
-
-close.addEventListener('click', function(){
-    modal.classList.remove('show');
-});
+  
