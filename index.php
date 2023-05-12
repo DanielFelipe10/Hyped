@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="styles/indx.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -88,6 +89,18 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
         </form>
         <a href="">¿Olvidaste tu contraseña?</a>
         <button class="loginButton btnSignUp">REGISTRARME</button>
+    </div>
+
+     <!--Modal de sign up-->
+    <div class="user_login user_register">
+        <form action="">
+            <h1>Registro</h1>
+            <input type="text" placeholder="Usuario">
+            <input type="email" name="" id="" placeholder="Email">
+            <input type="password" name="" id="" placeholder="Contraseña">
+            <input type="password" name="" id="" placeholder="Confirmar contraseña">
+            <button class="registerButton">REGISTRARME</button>
+        </form>
     </div>
 
     <!--Contenido principal-->
