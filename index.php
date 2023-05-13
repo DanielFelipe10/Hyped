@@ -153,7 +153,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 <script src="js/hamburger.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/dark_mode.js"></script>
-<script src="js/logm.js"></script>
-<script src="js/res/show_password.js"></script>
+<script src="js/login_modals.js"></script>
+<script src="js/show_password.js"></script>
 
 </html>
