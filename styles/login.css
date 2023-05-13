@@ -18,14 +18,29 @@
     z-index: 5;
 }
 
-.user_login span{
-    width: 5%;
-    height: 20%;
-    background-color: white;
-    transform: rotate(315deg);
+.eye1{
     position: absolute;
-    top: -4%;
-    right: 12%;
+    top: 43%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.eye2{
+    position: absolute;
+    top: 52%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.eye3{
+    position: absolute;
+    top: 66%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.fa{
+    color: #7a797e;
 }
 
 .user_login form{
@@ -101,7 +116,7 @@
 }
 
 .user_register{
-    opacity: 0;
+    opacity: 1;
 }
 
 .user_register form{

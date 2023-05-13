@@ -1,5 +1,5 @@
 <?php
-class Carrito{
+/*class Carrito{
     session_start();
 
     // Verificar si el carrito de compras ya existe en la sesión

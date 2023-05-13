@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/indx.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/log.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -71,7 +72,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             ?>
             <button class="buttons_header3" id="userButton"><img src="media/index/user_black.png" alt="" id="user"></button>
             <button class="buttons_header3 Hamburger"><img src="media/bag_black.png" alt=""  id="bag"><span>1</span></button>
-            
+
             <!--Apartado de carrito (Vista)-->
             <div class="Menu active">
                 <div class="close">
@@ -93,21 +94,24 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             <h6>Bienvenido(a)</h6>
             <h1>Iniciar sesión</h1>
             <input type="email" name="Email" placeholder="Email">
-            <input type="password" name="Password" id="" placeholder="Password">
+            <input name="Password" id="password" placeholder="Password">
+            <span class="eye1"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
             <button class="loginButton">ENTRAR</button>
         </form>
         <a href="">¿Olvidaste tu contraseña?</a>
         <button class="loginButton btnSignUp">REGISTRARME</button>
     </div>
 
-     <!--Modal de sign up
-    <div class="user_login user_register">
+
+    <!--<div class="user_login user_register">
         <form action="php/registerUsers.php" method="post">
             <h1>Registro</h1>
             <input type="text" name="Nombre" placeholder="Nombre">
             <input type="email" name="Email" placeholder="Email">
             <input type="password" name="Password" placeholder="Contraseña">
+            <span class="eye2"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
             <input type="password" name="Password2" placeholder="Confirmar contraseña">
+            <span class="eye3"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
             <button class="registerButton">REGISTRARME</button>
         </form>
     </div>-->
@@ -146,7 +150,10 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 </body>
 
 <script type="module" src="js/main.js"></script>
-<script type="module" src="js/hamburger.js"></script>
-<script type="module" src="js/slider.js"></script>
-<script type="module" src="js/dark_mode.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/dark_mode.js"></script>
+<script src="js/logm.js"></script>
+<script src="js/res/show_password.js"></script>
+
 </html>
