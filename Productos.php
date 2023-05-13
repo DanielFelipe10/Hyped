@@ -1,6 +1,12 @@
 <?php
 include_once 'php/Conexion.php';
 
+/*session_start();
+$usuario = $_SESSION['Email'];
+
+echo "<h1>Bienvenido $usuario</h1>";
+echo "<a href='php/logoutUsers.php'>Salir</a>";*/
+
 //Consulta Categorias
 $consultaC = "SELECT `ID`, `Nombre`, `Imagen` FROM `categoria`";
 $resultadoC = mysqli_query($conexion, $consultaC);
@@ -20,6 +26,7 @@ $resultadoP->bind_param('i', $idCategoria);
 $resultadoP->execute();
 $registrosP = $resultadoP->get_result();
 $datosP = $registrosP->fetch_all(MYSQLI_ASSOC);
+
 
 ?>
 
@@ -59,6 +66,7 @@ $datosP = $registrosP->fetch_all(MYSQLI_ASSOC);
             <img src="media/subir.png" alt="">
         </a>
     </header>
+
     <main>
         <div class="Principal">
             <h1>CATEGORIAS</h1>

@@ -197,6 +197,10 @@ header{
     text-align: right;
 }
 
+.user_name{
+    font-family: var(--Raleway);
+}
+
 /*Dark mode*/
 
 #mode_button{
@@ -241,4 +245,10 @@ a.color_white{
     100% {
       opacity: 0;
     }
+  }
+
+  /*Aditional styles*/
+
+  .user_login.invisible{
+    display: none;
   }

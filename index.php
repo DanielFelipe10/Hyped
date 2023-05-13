@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/indx.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/log.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -61,8 +61,17 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
                 <img src="media/lupa_black.png" alt="" id="lupa">
                 <input type="text" placeholder="Buscar">
             </form>
+            <?php
+            session_start();
+            if (isset($_SESSION['Email'])) {
+            $usuario = $_SESSION['Nombre'];
+            echo "<p class='user_name'>$usuario</p>";
+            echo "<a href='php/logoutUsers.php'>Salir</a>";
+            }
+            ?>
             <button class="buttons_header3" id="userButton"><img src="media/index/user_black.png" alt="" id="user"></button>
             <button class="buttons_header3 Hamburger"><img src="media/bag_black.png" alt=""  id="bag"><span>1</span></button>
+            
             <!--Apartado de carrito (Vista)-->
             <div class="Menu active">
                 <div class="close">
@@ -78,30 +87,30 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
     </header>
 
     <!--Modal de login-->
-    <div class="user_login">
+    <div class="user_login invisible">
         <!--<span></span>-->
-        <form action="">
+        <form action="php/loginUsers.php" method="post">
             <h6>Bienvenido(a)</h6>
             <h1>Iniciar sesión</h1>
-            <input type="text" placeholder="Usuario">
-            <input type="password" name="" id="" placeholder="Password">
+            <input type="email" name="Email" placeholder="Email">
+            <input type="password" name="Password" id="" placeholder="Password">
             <button class="loginButton">ENTRAR</button>
         </form>
         <a href="">¿Olvidaste tu contraseña?</a>
         <button class="loginButton btnSignUp">REGISTRARME</button>
     </div>
 
-     <!--Modal de sign up-->
+     <!--Modal de sign up
     <div class="user_login user_register">
-        <form action="">
+        <form action="php/registerUsers.php" method="post">
             <h1>Registro</h1>
-            <input type="text" placeholder="Usuario">
-            <input type="email" name="" id="" placeholder="Email">
-            <input type="password" name="" id="" placeholder="Contraseña">
-            <input type="password" name="" id="" placeholder="Confirmar contraseña">
+            <input type="text" name="Nombre" placeholder="Nombre">
+            <input type="email" name="Email" placeholder="Email">
+            <input type="password" name="Password" placeholder="Contraseña">
+            <input type="password" name="Password2" placeholder="Confirmar contraseña">
             <button class="registerButton">REGISTRARME</button>
         </form>
-    </div>
+    </div>-->
 
     <!--Contenido principal-->
     <div class="main_content">
@@ -140,5 +149,4 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 <script type="module" src="js/hamburger.js"></script>
 <script type="module" src="js/slider.js"></script>
 <script type="module" src="js/dark_mode.js"></script>
-<script type="module" src="js/open_modal.js"></script>
 </html>
