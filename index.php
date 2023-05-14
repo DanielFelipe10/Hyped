@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="styles/indx.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/login.css">
@@ -49,13 +49,13 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
     <header>
         <div class="header_div header1">
             <div class="options">
-                <h1>NOSOTROS</h1>
+                <a href="#about-us"><h1>NOSOTROS</h1></a>
                 <span></span>
-                <h1>CONTACTENOS</h1>
+                <a href=""><h1>CONTACTENOS</h1></a>
             </div>
         </div>
 
-        <div class="header_div header2"><h1>Hyped</h1></div>
+        <div class="header_div header2"><h1 class="logo">Hyped</h1></div>
 
         <div class="header_div header3">
             <form action="">
@@ -67,7 +67,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             if (isset($_SESSION['Email'])) {
             $usuario = $_SESSION['Nombre'];
             echo "<p class='user_name'>$usuario</p>";
-            echo "<a href='php/logoutUsers.php'>Salir</a>";
+            echo "<a href='php/logoutUsers.php' title='Cerrar sesión'><i class='fa fa-sign-out' aria-hidden='true'></i></a>";
             }else{
                 ?><button class="buttons_header3" id="userButton"><img src="media/index/user_black.png" alt="" id="user"></button>
             <?php
@@ -142,13 +142,27 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
         </div>
 
-        <div class="see_more"></div>
+        <a href="#insights" class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
     </div>
+
+    <div class="about-us" id="about-us">
+        <div class="us us2">
+            <p>Somos <b class="logo">Hyped</b>, una tienda de ropa en línea que se especializa en ofrecer marcas <b>exclusivas</b> y <b>originales</b>. Nuestro objetivo es brindarte una selección <b>única</b> de prendas y accesorios que reflejen tu <b>estilo</b> personal y te hagan sentir <b>especial</b>. Explora nuestra página web y descubre las últimas <b>tendencias</b> de moda.</p>
+        </div>
+        <div class="us us1">
+            <img src="https://media.giphy.com/media/jvQBUsZwIfwStBhBR0/giphy.gif" alt="">
+        </div>
+    </div>
+
+    <div class="insights" id="insights">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci itaque quae, veniam animi possimus distinctio, expedita eaque perferendis, autem ipsum optio facilis. Reiciendis alias quod, id quibusdam fugiat iste sequi?</p>
+    </div>
+
 </div>
 
 <button id="mode_button"><img src="media/index/sun_black.png" alt="" id="sun"></button>
 
-</body>
+
 
 <script type="module" src="js/main.js"></script>
 <script src="js/hamburger.js"></script>

@@ -1,8 +1,9 @@
-body{
+html,body{
     margin: 0;
     background-color: white;
     color: black;
     transition: background-color .3s;
+    scroll-behavior: smooth;
 }
 *{
     box-sizing: border-box;
@@ -50,6 +51,11 @@ header{
     align-items: center;
 }
 
+.header1 a{
+    text-decoration: none;
+    color: black;
+}
+
 .options{
     width: 60%;
     margin-left: 5%;
@@ -70,7 +76,7 @@ header{
     background-color: black;
 }
 
-.header2{
+.logo{
     font-family: var(--Sedgwick);
 }
 
@@ -167,11 +173,13 @@ header{
     flex-wrap: nowrap;
     width: 100%;
     transition: all 0.5s ease-in;
+    box-sizing: border-box;
 }
 
 .slider_content img{
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -199,14 +207,33 @@ header{
 
 .user_name{
     position: absolute;
-    top: 10%;
+    top: 21%;
     left: 30%;
-    padding: 15px;
-    border: 1px solid #dddddd;
-    border-radius: 30px;
-    background-color: #cccccc;
-    font-family: var(--Raleway);
+    width: 10%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #cccccc64;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
+
+.fa-sign-out::before{
+    font-size: 30px;
+}
+
+.arrow-down{
+    margin: auto;
+    position: absolute;
+    bottom: -2%;
+    font-size: 60px;
+    cursor: pointer;
+}
+
 
 /*Dark mode*/
 
@@ -241,4 +268,55 @@ body.darkmode, .user_login.darkmode{
 a.color_white{
     color: white;
 }
+
+.about-us{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: var(--Raleway);
+}
+
+.us{
+    width: 50vw;
+    height: 100%;
+    padding: 10px;
+}
+
+.us2{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: end;
+}
+
+.use2 h1{
+    margin: 0;
+}
+
+.us2 p{
+    width: 70%;
+    font-size: 2.3rem;
+    text-align: end;
+    margin: 0;
+}
+
+.us1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.us1 img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.insights{
+    width: 100vw;
+    height: 100vh;
+}
+
 
