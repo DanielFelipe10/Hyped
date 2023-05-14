@@ -68,9 +68,11 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             $usuario = $_SESSION['Nombre'];
             echo "<p class='user_name'>$usuario</p>";
             echo "<a href='php/logoutUsers.php'>Salir</a>";
+            }else{
+                ?><button class="buttons_header3" id="userButton"><img src="media/index/user_black.png" alt="" id="user"></button>
+            <?php
             }
             ?>
-            <button class="buttons_header3" id="userButton"><img src="media/index/user_black.png" alt="" id="user"></button>
             <button class="buttons_header3 Hamburger"><img src="media/bag_black.png" alt=""  id="bag"><span>1</span></button>
 
             <!--Apartado de carrito (Vista)-->
@@ -89,32 +91,31 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 
     <!--Modal de login-->
     <div class="user_login invisible">
-        <!--<span></span>-->
         <form action="php/loginUsers.php" method="post">
             <h6>Bienvenido(a)</h6>
             <h1>Iniciar sesión</h1>
-            <input type="email" name="Email" placeholder="Email">
-            <input name="Password" id="password" placeholder="Password">
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="password" name="Password" id="password" placeholder="Password" required>
             <span class="eye1"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
             <button class="loginButton">ENTRAR</button>
         </form>
         <a href="">¿Olvidaste tu contraseña?</a>
-        <button class="loginButton btnSignUp">REGISTRARME</button>
+        <button class="loginButton btnSignUp" id="btnSignUp">REGISTRARME</button>
+
+        <div class="user_login user_register invisible" id="user_register">
+            <span class="arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+            <form action="php/registerUsers.php" method="post">
+                <h1>Registro</h1>
+                <input type="text" name="Nombre" placeholder="Nombre" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="password" name="Password" id="passwordR" placeholder="Contraseña" required>
+                <span class="eye2"><i class="fa fa-eye-slash" id="eye_r_password" aria-hidden="true"></i></span>
+                <input type="password" name="Password2" id="passwordR2" placeholder="Confirmar contraseña" required>
+                <span class="eye3"><i class="fa fa-eye-slash" id="eye_verify_password" aria-hidden="true"></i></span>
+                <button class="registerButton">REGISTRARME</button>
+            </form>
+        </div>
     </div>
-
-
-    <!--<div class="user_login user_register">
-        <form action="php/registerUsers.php" method="post">
-            <h1>Registro</h1>
-            <input type="text" name="Nombre" placeholder="Nombre">
-            <input type="email" name="Email" placeholder="Email">
-            <input type="password" name="Password" placeholder="Contraseña">
-            <span class="eye2"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
-            <input type="password" name="Password2" placeholder="Confirmar contraseña">
-            <span class="eye3"><i class="fa fa-eye-slash" id="eye" aria-hidden="true"></i></span>
-            <button class="registerButton">REGISTRARME</button>
-        </form>
-    </div>-->
 
     <!--Contenido principal-->
     <div class="main_content">

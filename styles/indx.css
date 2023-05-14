@@ -198,6 +198,13 @@ header{
 }
 
 .user_name{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    background-color: #cccccc;
     font-family: var(--Raleway);
 }
 
@@ -235,19 +242,3 @@ a.color_white{
     color: white;
 }
 
-@keyframes circle {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  /*Aditional styles*/
-.user_login.invisible{
-    display: none;
-  }

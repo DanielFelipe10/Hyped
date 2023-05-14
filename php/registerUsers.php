@@ -7,7 +7,7 @@ $Email = $_POST['Email'];
 $Password = $_POST['Password'];
 $Password2 = $_POST['Password2'];
 
-$insertar = "INSERT INTO `Usuarios`(`user_ID`, `Nombre`, `Email`, `Password`, `rePassword) VALUES ('','$Nombre','$Email','$Password','$Password2')";
+$insertar = "INSERT INTO `Usuarios`(`user_ID`, `Nombre`, `Email`, `Password`, `rePassword`) VALUES ('','$Nombre','$Email','$Password','$Password2')";
 
 $verificar_usuario = mysqli_query($conexion, "select * from Usuarios where Email = '$Email'");
 

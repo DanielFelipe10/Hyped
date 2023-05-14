@@ -115,8 +115,19 @@
     background-color: rgb(103, 117, 132);
 }
 
+.arrow{
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    cursor: pointer;
+}
+
+.fa-arrow-left{
+    color: lightslategray;
+}
+
 .user_register{
-    opacity: 1;
+    box-shadow: none;
 }
 
 .user_register form{
@@ -158,4 +169,14 @@
 
 a.color_white{
     color: white;
+}
+
+/*Aditional styles*/
+.user_login.invisible{
+    display: none;
+}
+
+.user_register.invisible{
+    display: none;
+    z-index: 4;
 }
