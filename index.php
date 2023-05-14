@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--scripts for highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/highchart.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
@@ -155,7 +162,63 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
     </div>
 
     <div class="insights" id="insights">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci itaque quae, veniam animi possimus distinctio, expedita eaque perferendis, autem ipsum optio facilis. Reiciendis alias quod, id quibusdam fugiat iste sequi?</p>
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+        </figure>
+        <script type="text/javascript">
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 45
+                    },
+                    style: {
+                        backgroundColor: 'rgb(20,20,20)' 
+                    }
+                },
+                title: {
+                    text: 'Nuestros productos más vendidos',
+                    align: 'center',
+                    style: {
+                        fontFamily: 'Poppins',
+                        fontSize: '1.8rem',
+                        fontWeight: 'bold'
+                    }
+                },
+                subtitle: {
+                    text: 'Año 2022 -2023',
+                    align: 'center'
+                },
+                plotOptions: {
+                    pie: {
+                        innerSize: 200,
+                        depth: 80
+                    }
+                },
+                series: [{
+                    name: 'Medals',
+                    data: [
+                        ['Norway', 16],
+                        ['Germany', 12],
+                        ['USA', 8],
+                        ['Sweden', 8],
+                        ['Netherlands', 8],
+                        ['ROC', 6],
+                        ['Austria', 7],
+                        ['Canada', 4],
+                        ['Japan', 3]
+                    ],
+                    dataLabels: {
+                        style: {
+                            fontFamily: 'Poppins',
+                            fontSize: '1.5rem'
+                        }
+                    }
+                }]
+            });
+        </script>
+
     </div>
 
 </div>
@@ -170,5 +233,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 <script src="js/dark_mode.js"></script>
 <script src="js/login_modals.js"></script>
 <script src="js/show_password.js"></script>
+
+
 
 </html>
