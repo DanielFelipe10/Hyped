@@ -1,0 +1,255 @@
+html, body{
+    margin: 0;
+}
+
+:root{
+    --Play:'Play', sans-serif;
+    --Raleway:'Raleway', sans-serif;
+    --Poppins:'Poppins', sans-serif;
+    --Sedgwick:'Sedgwick Ave Display', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.968);
+}
+
+.header_div{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_div h1{
+    margin: 0;
+}
+
+.header1{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header1 a{
+    text-decoration: none;
+    color: black;
+    cursor: none;
+    text-transform: uppercase;
+}
+
+.options{
+    width: 60%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options h1{
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: var(--Poppins);
+}
+
+.options span{
+    width: 2px;
+    height: 20px;
+    background-color: black;
+}
+
+.logop{
+    color: black;
+    text-decoration: none;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1rem;
+}
+
+/*Part in header of search and car*/
+
+.header3{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header3 form{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+}
+
+.header3 input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+    font-family: var(--Raleway);
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+.header3 input:focus{
+    outline: none;
+}
+
+.header3 form img{
+    width: 7%;
+    height: 7%;
+}
+
+.buttons_header3{
+    width: 8%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.buttons_header3 img{
+    width: 60%;   
+}
+
+#bag{
+    width: 69%;
+}
+
+#bag span{
+    position: absolute;
+
+}
+
+.user_name{
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #cccccc64;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 140px;
+}
+
+.Producto{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.Descuento{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 80%;
+    top: 140%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    transform: rotate(10deg);
+}
+
+.Descuento h1{
+    color: white;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.Imagen{
+    width: 60%;
+}
+
+.Imagen img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.Descripcion{
+    box-sizing: border-box;
+    width: 80%;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+}
+
+.ICategoria{
+    margin: 0;
+    color: #666666;
+    font-size: 1.3rem;
+}
+
+.Descripcion h1{
+    margin-top: 0;
+}
+
+.Descripcion h5{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #666666;
+    text-decoration: line-through;
+}
+
+.Descripcion h4{
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Butts{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Buttons{
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    padding: 5px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.Buttons h2{
+    width: 60%;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.Buttons img{
+    width: 20%;
+}

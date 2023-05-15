@@ -28,7 +28,6 @@
 <body>
     
 <?php
-
 if (!isset($_COOKIE['modal_mostrado'])) {
     
 ?>
@@ -148,11 +147,11 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 
         <!--Categorias en el main-->
         <div class="user_select">
-            <a href="Productos.php" ><h1>GORRAS</h1></a>
-            <a href=""><h1>GAFAS</h1></a>
+            <a href="Productos.php?categoria=2" ><h1>GORRAS</h1></a>
+            <a href="Productos.php?categoria=3"><h1>GAFAS</h1></a>
             <a href="Productos.php?categoria=4"><h1>CHAQUETAS</h1></a>
-            <a href=""><h1>SACOS</h1></a>
-            <a href=""><h1>BASIC</h1></a>
+            <a href="Productos.php?categoria=1"><h1>SACOS</h1></a>
+            <a href="Productos.php?categoria=5"><h1>BASIC</h1></a>
         </div>
 
         <div class="description">
@@ -249,16 +248,15 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 
 </div>
 
-<button id="mode_button"><img src="media/index/sun_black.png" alt="" id="sun"></button>
+<!--<button id="mode_button"><img src="media/index/sun_black.png" alt="" id="sun"></button>-->
 
 
 
-<script type="module" src="js/main.js"></script>
 <script src="js/hamburger.js"></script>
 <script src="js/slider.js"></script>
-<script src="js/dark_mode.js"></script>
 <script src="js/login_modals.js"></script>
 <script src="js/show_password.js"></script>
+<script src="js/main.js"></script>
 
 
 

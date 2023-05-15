@@ -13,47 +13,136 @@ main{
 
 header{
     width: 100%;
-    height: 130px;
+    height: 15vh;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.968);
 }
 
-header a{
-    text-decoration: none;
-    font-size: 40px;
-    margin: 0;
-    font-family: 'Sedgwick Ave Display', cursive;
-    color: black;
-    font-weight: bold;
-}
-
-.Create_product{
-    width: 15%;
-    height: 30%;
-    position: absolute;
-    top: 39%;
-    left: 4%;
+.header_div{
+    width: 33.3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    border: none;
 }
 
-.Create_product p{
+.header_div h1{
+    margin: 0;
+}
+
+.header1{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header1 a{
+    text-decoration: none;
+    color: black;
+    cursor: none;
+}
+
+.options{
     width: 60%;
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.Create_product img{
-    width: 15%;
+.options h1{
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: var(--Poppins);
+}
+
+.options span{
+    width: 2px;
+    height: 20px;
+    background-color: black;
+}
+
+.logop{
+    color: black;
+    text-decoration: none;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1rem;
+}
+
+/*Part in header of search and car*/
+
+.header3{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header3 form{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+}
+
+.header3 input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+    font-family: var(--Raleway);
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+.header3 input:focus{
+    outline: none;
+}
+
+.header3 form img{
+    width: 7%;
+    height: 7%;
+}
+
+.buttons_header3{
+    width: 8%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.buttons_header3 img{
+    width: 60%;   
+}
+
+#bag{
+    width: 69%;
+}
+
+#bag span{
+    position: absolute;
+
+}
+
+.user_name{
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #cccccc64;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .Principal{

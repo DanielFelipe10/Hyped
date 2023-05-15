@@ -37,11 +37,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" type="text/css" href="styles/Detalles.css">
-        <link rel="stylesheet" type="text/css" href="styles/hamburger.css">
+        <link rel="stylesheet" type="text/css" href="styles/detallees.css">
+        <link rel="stylesheet" type="text/css" href="styles/hamburgeer.css">
+        <link rel="icon" href="media/icon.png">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
         <?php
             foreach ($datosP as $row) {
@@ -54,19 +57,54 @@
     </head>
     <body>
 
-        <header>
-        <a href="index.php">Hyped</a>
+    <header>
+        <div class="header_div header1">
+            <div class="options">
+                <a href=""><h1><?= $row['Categoria']?></h1></a>
+            </div>
+        </div>
+
+        <div class="header_div header2"><a href="index.php" class="logop"><h1>Hyped</h1></a></div>
+
+        <div class="header_div header3">
+            <form action="">
+                <img src="media/lupa_black.png" alt="" id="lupa">
+                <input type="text" placeholder="Buscar">
+            </form>
+            <?php
+            session_start();
+            if (isset($_SESSION['Email'])) {
+            $usuario = $_SESSION['Nombre'];
+            echo "<p class='user_name'>$usuario</p>";
+            echo "<a href='php/logoutUsers.php' title='Cerrar sesión'><i class='fa fa-sign-out' aria-hidden='true'></i></a>";
+            ?>
+            <?php
+            }
+            ?>
+            <button class="buttons_header3 Hamburger"><img src="media/bag_black.png" alt=""  id="bag"><span>1</span></button>
+
+            <!--Apartado de carrito (Vista)-->
             <div class="Menu active">
                 <div class="close">
                     <img src="media/cruzar.png" alt="" id="cerrar">
                 </div>
                 <div class="Carrito">
                     <h1>Mi bolsa</h1>
+                    <?php 
+                        include_once 'carrito.php';
+                        $carrito = new Carrito();
+                        foreach ($carrito->obtenerProductos() as $producto): ?>
+                        
+                            <p><?php echo $producto['nombre']; ?></p>
+                            <p><?php echo $producto['precio']; ?></p>
+                        
+                    <?php endforeach; ?>
                     <button>PAGAR</button>
                 </div>
             </div>
             <div class="Shadow activeS"></div>
-        </header>
+        </div>
+    </header>
 
         <main>
             <?php
@@ -108,9 +146,6 @@
                         <a href="#" class="Buttons">
                             <h2>AGREGAR</h2>
                         </a>
-                        <a href="#" class="Buttons">
-                            <h2>COMPRAR</h2>
-                        </a>
                         <p><?= $row['Pago'] ?></p>
                     </div>
                 </div>
@@ -118,11 +153,6 @@
             <?php
                 }
             ?>
-
-            <div class="Prueba">
-
-
-            </div>
         </main>
     </body>
 
