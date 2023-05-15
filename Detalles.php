@@ -123,7 +123,8 @@
             ?>
 
             <div class="Prueba">
-                <h1>Hola</h1>
+
+
             </div>
         </main>
     </body>

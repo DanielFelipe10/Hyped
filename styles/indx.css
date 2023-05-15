@@ -1,0 +1,383 @@
+html,body{
+    margin: 0;
+    background-color: white;
+    color: black;
+    transition: background-color .3s;
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --Play:'Play', sans-serif;
+    --Raleway:'Raleway', sans-serif;
+    --Poppins:'Poppins', sans-serif;
+    --Sedgwick:'Sedgwick Ave Display', sans-serif;
+}
+
+.main_view{
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_div{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_div h1{
+    margin: 0;
+}
+
+.header1{
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.options{
+    width: 60%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.options h1{
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: var(--Poppins);
+}
+
+.options span{
+    width: 2px;
+    height: 20px;
+    background-color: black;
+}
+
+.logo{
+    font-family: var(--Sedgwick);
+}
+
+/*Part in header of search and car*/
+
+.header3{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header3 form{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cccccc;
+}
+
+.header3 input{
+    width: 90%;
+    border: none;
+    padding: 5px;
+    font-family: var(--Raleway);
+    font-size: 1.1rem;
+    background-color: transparent;
+}
+
+.header3 input:focus{
+    outline: none;
+}
+
+.header3 form img{
+    width: 7%;
+    height: 7%;
+}
+
+.buttons_header3{
+    width: 8%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.buttons_header3 img{
+    width: 60%;   
+}
+
+#bag{
+    width: 69%;
+}
+
+#bag span{
+    position: absolute;
+
+}
+
+/*Contenido principal*/
+
+.main_content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    margin-top: 2%;
+    width: 550px;
+    height: 550px;
+    background: url(media/Hype_t.png);
+    background-size: cover;
+    background-position:center;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.8;
+    /*animation: circle 5s infinite ease-in-out;*/
+}
+
+.slider{
+    margin-top: 2%;
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slider_content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    box-sizing: border-box;
+}
+
+.slider_content img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.user_select{
+    position: absolute;
+    left: 0;
+    margin-left: 2.5%;
+    background-color: transparent;
+}
+
+.user_select a{
+    font-family: var(--Poppins);
+    text-decoration: none;
+    color: black;
+}
+
+.description{
+    position: absolute;
+    right: 3%;
+    width: 20%;
+    font-family: var(--Poppins);
+    font-size: 1.6rem;
+    text-align: right;
+}
+
+.user_name{
+    position: absolute;
+    top: 21%;
+    left: 30%;
+    width: 10%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #cccccc64;
+    font-family: var(--Poppins);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.fa-sign-out::before{
+    font-size: 30px;
+}
+
+.arrow-down{
+    margin: auto;
+    position: absolute;
+    bottom: -2%;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+
+/*Dark mode*/
+
+#mode_button{
+    width: 5%;
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#mode_button img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+body.darkmode, .user_login.darkmode{
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.user_login.darkmode{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    border: 2px solid rgb(47, 47, 47);
+}
+
+
+a.color_white{
+    color: white;
+}
+
+.about-us{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: var(--Raleway);
+}
+
+.us{
+    width: 50vw;
+    height: 100%;
+    padding: 10px;
+}
+
+.us2{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: end;
+}
+
+.use2 h1{
+    margin: 0;
+}
+
+.us2 p{
+    width: 70%;
+    font-size: 2.3rem;
+    text-align: end;
+    margin: 0;
+}
+
+.us1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.us1 img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.insights{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.contact{
+    width: 100vw;
+    height: 100vh;
+    background: url(media/bg-contact.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--Raleway);
+    color: white;
+}
+
+.contact h2{
+    font-size: 2rem;
+}
+
+.contact h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.contact p{
+    text-align: center;
+    font-size: 1.7rem;
+    width: 70%;
+}
+
+.contact form{
+    width: 50%;
+    height: 8%;
+    display: flex;
+}
+
+.contact input{
+    width: 70%;
+    font-family: var(--Raleway);
+    font-size: 1.2rem;
+    border: none;
+    padding: 10px;
+}
+
+.contact input:focus{
+    outline: none;
+}
+
+.contact button{
+    width: 30%;
+    font-family: var(--Raleway);
+    font-size: 1.2rem;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+

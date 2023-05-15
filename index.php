@@ -10,11 +10,12 @@
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/indx.css">
     <link rel="stylesheet" href="styles/hamburgeer.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/highchart.css">
+    <link rel="icon" href="media/icon.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
@@ -165,6 +166,19 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
         <figure class="highcharts-figure">
             <div id="container"></div>
         </figure>
+        <?php
+        include_once 'php/Conexion.php';
+        $consultaC = "SELECT `Nombre`, `Ventas` FROM `Categoria`";
+        $resultadoC = mysqli_query($conexion, $consultaC);
+        $registrosC = mysqli_num_rows($resultadoC);
+        $datosC = mysqli_fetch_all($resultadoC, MYSQLI_ASSOC);
+
+        $datos_grafico = array();
+
+        foreach ($datosC as $dato) {
+            $datos_grafico[] = array($dato['Nombre'], intval($dato['Ventas']));
+        }
+        ?>
         <script type="text/javascript">
             Highcharts.chart('container', {
                 chart: {
@@ -178,17 +192,21 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
                     }
                 },
                 title: {
-                    text: 'Nuestros productos más vendidos',
+                    text: 'NUESTRAS VENTAS',
                     align: 'center',
                     style: {
                         fontFamily: 'Poppins',
-                        fontSize: '1.8rem',
-                        fontWeight: 'bold'
+                        fontSize: '3rem',
                     }
                 },
                 subtitle: {
-                    text: 'Año 2022 -2023',
-                    align: 'center'
+                    text: '2022 -2023',
+                    align: 'center',
+                    style: {
+                        fontFamily: 'Raleway',
+                        fontSize: '1.1rem',
+
+                    }
                 },
                 plotOptions: {
                     pie: {
@@ -197,28 +215,27 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
                     }
                 },
                 series: [{
-                    name: 'Medals',
-                    data: [
-                        ['Norway', 16],
-                        ['Germany', 12],
-                        ['USA', 8],
-                        ['Sweden', 8],
-                        ['Netherlands', 8],
-                        ['ROC', 6],
-                        ['Austria', 7],
-                        ['Canada', 4],
-                        ['Japan', 3]
-                    ],
+                    name: 'Ventas',
+                    data: <?php echo json_encode($datos_grafico); ?>,
                     dataLabels: {
                         style: {
                             fontFamily: 'Poppins',
-                            fontSize: '1.5rem'
+                            fontSize: '1.8rem'
                         }
                     }
                 }]
             });
         </script>
 
+    </div>
+
+    <div class="contact">
+        <h2 class="logo">Hyped</h2>
+        <h1>PRONTO NUESTRA NUEVA SECCIÓN DE ZAPATOS</h1>
+        <p>Regístrate ahora para nuestro boletín informativo y sé el primero en recibir actualizaciones sobre nuestro lanzamiento de la nueva sección. Obtén acceso exclusivo a noticias, ofertas especiales y promociones, y mantente al tanto de las últimas tendencias de la moda. ¡No te pierdas esta oportunidad única de estar un paso adelante en el mundo de la moda!</p>
+        <form action="post">
+            <input type="email" required><button>SUSCRIBIRME</button>
+        </form>
     </div>
 
 </div>
