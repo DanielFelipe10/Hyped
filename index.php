@@ -233,8 +233,8 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
         <h2 class="logo">Hyped</h2>
         <h1>PRONTO NUESTRA NUEVA SECCIÓN DE ZAPATOS</h1>
         <p>Regístrate ahora para nuestro boletín informativo y sé el primero en recibir actualizaciones sobre nuestro lanzamiento de la nueva sección. Obtén acceso exclusivo a noticias, ofertas especiales y promociones, y mantente al tanto de las últimas tendencias de la moda. ¡No te pierdas esta oportunidad única de estar un paso adelante en el mundo de la moda!</p>
-        <form action="post">
-            <input type="email" required><button>SUSCRIBIRME</button>
+        <form action="php/suscribe.php" method="post">
+            <input type="email" placeholder="Email" name="Email" required><button>SUSCRIBIRME</button>
         </form>
     </div>
 
