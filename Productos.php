@@ -1,11 +1,6 @@
 <?php
 include_once 'php/Conexion.php';
-
-/*session_start();
-$usuario = $_SESSION['Email'];
-
-echo "<h1>Bienvenido $usuario</h1>";
-echo "<a href='php/logoutUsers.php'>Salir</a>";*/
+include_once 'carrito.php';
 
 //Consulta Categorias
 $consultaC = "SELECT `ID`, `Nombre`, `Imagen` FROM `categoria`";
@@ -61,10 +56,6 @@ $datosP = $registrosP->fetch_all(MYSQLI_ASSOC);
             </div>
         </div>
         <div class="Shadow activeS"></div>
-        <a href="upload_product.php" class="Create_product">
-            <p>SUBIR PRODUCTO</p>
-            <img src="media/subir.png" alt="">
-        </a>
     </header>
 
     <main>
@@ -99,7 +90,9 @@ $datosP = $registrosP->fetch_all(MYSQLI_ASSOC);
                         <h2><?= $row['Nombre']?></h2>
                         <p>$<?= number_format($row['Precio'],0,',','.')?></p>
                         <form method="post" class="cardButtons">
-                            <button>Agregar</button>
+                            <input type="hidden" name="nombre" value="<?= $row['Nombre']?>">
+                            <input type="hidden" name="precio" value="<?= $row['Precio']?>">
+                            <button type="submit" name="agregar">Agregar</button>
                             <button class="liked"><img src="media/hearth.png" alt=""></button>
                         </form>
                     </div>
@@ -111,7 +104,6 @@ $datosP = $registrosP->fetch_all(MYSQLI_ASSOC);
                 ?>
             </div>
         </div>
-        <button id="mode_button">Dark mode</button>
     </main>
 </body>
 

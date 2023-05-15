@@ -19,7 +19,7 @@
     }*/
     $id = isset($_GET['id']) ? $_GET['id']:'';
 
-    $consultaP = "SELECT products.`ID_P`, products.`Nombre`, products.`Precio`, categoria.`Nombre` AS `Categoria`, products.`Descripcion`, products.`Imagen`, products.`Descuento`, products.`Disponibilidad`
+    $consultaP = "SELECT products.`ID_P`, products.`Nombre`, products.`Precio`, categoria.`Nombre` AS `Categoria`, products.`Descripcion`, products.`Imagen`, products.`Descuento`, products.`Disponibilidad`, products.`Pago`
     FROM `products`
     JOIN `categoria` ON products.`Categoria` = categoria.`ID`
     WHERE products.`ID_P` = '$id'";
@@ -56,10 +56,6 @@
 
         <header>
         <a href="index.php">Hyped</a>
-            <button class="Hamburger">
-                <img src="media/bagB.png" alt="Bag">
-                <span>1</span>
-            </button>
             <div class="Menu active">
                 <div class="close">
                     <img src="media/cruzar.png" alt="" id="cerrar">
@@ -115,6 +111,7 @@
                         <a href="#" class="Buttons">
                             <h2>COMPRAR</h2>
                         </a>
+                        <p><?= $row['Pago'] ?></p>
                     </div>
                 </div>
             </div>

@@ -1,30 +1,31 @@
 <?php
-/*class Carrito{
-    session_start();
 
-    // Verificar si el carrito de compras ya existe en la sesión
-    if (!isset($_SESSION['carrito'])) {
-    // Si no existe, inicializar el carrito como un array vacío
-    $_SESSION['carrito'] = array();
+class Carrito {
+    public function __construct() {
+        // Verificar si el carrito de compras ya existe en la sesión
+        if (!isset($_SESSION['carrito'])) {
+            // Si no existe, inicializar el carrito como un array vacío
+            $_SESSION['carrito'] = array();
+        }
     }
 
     // Agregar producto al carrito
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['agregar'])) {
-    $idProducto = $_POST['id'];
-    $nombreProducto = $_POST['nombre'];
-    $precioProducto = $_POST['precio'];
-    $cantidadProducto = 1; // Puedes establecer la cantidad por defecto o permitir que el usuario la seleccione en el formulario
+    public function agregarProducto($idProducto, $nombreProducto, $precioProducto, $cantidadProducto = 1) {
+        // Crear un array con los datos del producto
+        $producto = array(
+            'id' => $idProducto,
+            'nombre' => $nombreProducto,
+            'precio' => $precioProducto,
+            'cantidad' => $cantidadProducto
+        );
 
-    // Crear un array con los datos del producto
-    $producto = array(
-        'id' => $idProducto,
-        'nombre' => $nombreProducto,
-        'precio' => $precioProducto,
-        'cantidad' => $cantidadProducto
-    );
-
-    // Agregar el producto al carrito
-    array_push($_SESSION['carrito'], $producto);
+        // Agregar el producto al carrito
+        array_push($_SESSION['carrito'], $producto);
     }
+
+    public function obtenerProductos() {
+        return $_SESSION['carrito'];
+    }
+    
 }
-?>
+

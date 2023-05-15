@@ -59,7 +59,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             <div class="options">
                 <a href="#about-us"><h1>NOSOTROS</h1></a>
                 <span></span>
-                <a href=""><h1>CONTACTENOS</h1></a>
+                <a href="#contact"><h1>CONTACTENOS</h1></a>
             </div>
         </div>
 
@@ -90,6 +90,15 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
                 </div>
                 <div class="Carrito">
                     <h1>Mi bolsa</h1>
+                    <?php 
+                        include_once 'carrito.php';
+                        $carrito = new Carrito();
+                        foreach ($carrito->obtenerProductos() as $producto): ?>
+                        
+                            <p><?php echo $producto['nombre']; ?></p>
+                            <p><?php echo $producto['precio']; ?></p>
+                        
+                    <?php endforeach; ?>
                     <button>PAGAR</button>
                 </div>
             </div>
@@ -150,7 +159,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere</p>
         </div>
 
-        <a href="#insights" class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+        <a href="#about-us" class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
     </div>
 
     <div class="about-us" id="about-us">
@@ -229,7 +238,7 @@ setcookie('modal_mostrado', 'true', time()+3600*24*30);
 
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h2 class="logo">Hyped</h2>
         <h1>PRONTO NUESTRA NUEVA SECCIÓN DE ZAPATOS</h1>
         <p>Regístrate ahora para nuestro boletín informativo y sé el primero en recibir actualizaciones sobre nuestro lanzamiento de la nueva sección. Obtén acceso exclusivo a noticias, ofertas especiales y promociones, y mantente al tanto de las últimas tendencias de la moda. ¡No te pierdas esta oportunidad única de estar un paso adelante en el mundo de la moda!</p>
